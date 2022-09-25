@@ -12,17 +12,21 @@ import javax.persistence.*;
 public class Dealer {
 
     @Id
+    @Column(name = "user_seq", nullable = false)
+    private Long userSeq;
 
-    private Long seq;
 
-    @OneToOne
-    @JoinColumn
-    private User user;
 
     private String name;
     private String dealerNumber;
     private String affiliation;
     private String address;
+
+    @ManyToOne
+    private Guild guild;
+
+    @ManyToOne
+    private Company company;
 
 
 }

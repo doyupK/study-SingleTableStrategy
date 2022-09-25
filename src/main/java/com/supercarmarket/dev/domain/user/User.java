@@ -29,5 +29,8 @@ public class User extends TimeStamped {
     private UserRatingEnum userRating;
     @Enumerated(EnumType.STRING)
     private UserRoleEnum userRole;
+    @OneToOne
+    @JoinColumn
+    private Dealer dealer;
 
 }
