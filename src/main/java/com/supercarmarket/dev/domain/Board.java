@@ -6,6 +6,7 @@ import lombok.*;
 
 import javax.persistence.*;
 import javax.persistence.criteria.CriteriaBuilder;
+import java.util.List;
 
 
 @Setter
@@ -18,7 +19,7 @@ import javax.persistence.criteria.CriteriaBuilder;
 public abstract class Board extends TimeStamped{
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "board_id")
+    @Column(name = "BOARD_ID")
     private Long id;
 
     private String title;
@@ -35,5 +36,7 @@ public abstract class Board extends TimeStamped{
     @ManyToOne
     private Category category;
 
+    @OneToMany(mappedBy = "board", fetch = FetchType.LAZY)
+    private List<Attachment> attachment;
 
 }

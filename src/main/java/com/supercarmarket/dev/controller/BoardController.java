@@ -63,6 +63,7 @@ public class BoardController {
         paparazzi.setPrzRating(PaparazziRatingEnum.BEFORE_CONFIRM);
         paparazziRepository.save(paparazzi);
 
+        ///////////////////////////////////////////////////////////////////////////////////////////////
 
         Magazine magazine = new Magazine();
         magazine.setTitle("title");
@@ -75,6 +76,9 @@ public class BoardController {
         magazine.setUser(user);
         magazine.setMgzBannerImageUrl("image url test");
         magazineRepository.save(magazine);
+
+
+        ///////////////////////////////////////////////////////////////////////////////////
 
 
 
@@ -106,6 +110,7 @@ public class BoardController {
         product.setProductModel(productModel);
         productRepository.save(product);
 
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////
 
         Download download = new Download();
         download.setTitle("title");

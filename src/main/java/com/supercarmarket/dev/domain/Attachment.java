@@ -18,9 +18,9 @@ public class Attachment {
 
     private String dattAttachmentUrl;
 
-    @ManyToOne
-    @JoinColumn(name = "boardSeq")
-    private Board boardSeq;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "BOARD_ID")
+    private Board board;
 
 
 }
